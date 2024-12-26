@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/output.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/output.css" />
     <title>Tailwind Project</title>
 </head>
+
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+    <!-- Navbar -->
+    <nav>
+        <div class="p-3 flex justify-between items-center">
+            <a class="flex gap-3 items-center" href="#">
+                <img class="object-cover max-w-20 max-h-12"
+                    src="https://img.freepik.com/free-vector/branding-identity-corporate-vector-logo-r-design_460848-8630.jpg?t=st=1735202380~exp=1735205980~hmac=9fb91ba5569cdfad5c93833392bed430253bc05d05c516ce22dab8164299d819&w=740"
+                    alt="" />
+                <span>My Company</span>
+            </a>
+            <div class="hidden md:flex gap-12">
+                <a class="hover:text-primary  href="#">Pricing</a>
+                <a class="hover:text-primary" href="#">Docs</a>
+                <a class="hover:text-primary" href="#">Changelog</a>
+                <a class="hover:text-primary" href="#">Blogs</a>
+                <a class="hover:text-primary" href="#">Login</a>
+            </div>
+
+            <div
+                class="hidden md:flex items-center gap-2 p-2 border border-gray-800 shadow-md hover:bg-yellow-400 hover:shadow-lg hover:-translate-y-1 transition duration-300 group">
+                <button>Explore more</button>
+                <i class="fa-solid fa-arrow-right group-hover:translate-x-1"></i>
+            </div>
+            <button onclick="handleMenu()" class="md:hidden" href="#">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden">
+                <div class="flex justify-between items-center">
+                    <a class="flex gap-5 items-center" href="#">
+                        <img class="object-cover max-w-20 max-h-12"
+                            src="https://img.freepik.com/free-vector/branding-identity-corporate-vector-logo-r-design_460848-8630.jpg?t=st=1735202380~exp=1735205980~hmac=9fb91ba5569cdfad5c93833392bed430253bc05d05c516ce22dab8164299d819&w=740"
+                            alt="" />
+                        <span>My Company</span>
+                    </a>
+                    <button onclick="handleMenu()" class="md:hidden" href="#">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <a class="hover:bg-blue-100 p-3 block rounded-lg" href="#">Pricing</a>
+                    <a class="hover:bg-blue-100 p-3 block rounded-lg" href="#">Blog</a>
+                    <a class="hover:bg-blue-100 p-3 block rounded-lg" href="#">Docs</a>
+                    <a class="hover:bg-blue-100 p-3 block rounded-lg" href="#">Changelog</a>
+                    <a class="hover:bg-blue-100 p-3 block rounded-lg" href="#">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main-section -->
+    <main class="bg-gray-100">
+        <!-- hero-section -->
+        <div id="hero-section" class="min-h-screen pt-12 mx-8 sm:justify-center sm:text-center">
+            <div class="bg-yellow-100 flex items-center justify-center gap-2 w-fit px-4 rounded-md border border-yellow-700 shadow-md hover:-translate-y-1 transition duration-300 hover:shadow-lg group sm:justify-center sm:flex sm:mx-auto">
+                <button class="text-yellow-500">
+                    v0.21.1: <span class="text-yellow-800">Find-in-bug-fix</span>
+                </button>
+                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 duration-300 text-yellow-800"></i>
+            </div>            
+            <h1 class="pt-6 text-4xl font-semibold leading-snug md:text-7xl ">Webapp to Desktop app in a minutes </h1>
+            <p class="pt-6 text-lg">Assumenda sit dolor at Reprehenderit assumenda neque dolores exercitationem minus.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+                <button class=" bg-blue-600 text-white py-3 px-8 rounded shadow-md hover:bg-opacity-80">Download
+                    Now</button>
+                <button class=" bg-white py-3 px-8 border border-black rounded shadow-lg">Read Docs</button>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/script.js"></script>
 </body>
+
 </html>

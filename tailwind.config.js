@@ -2,7 +2,14 @@
 module.exports = {
   content: ['./index.html'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily : {
+        'avadh-font' : ['Poppins']
+      },
+      colors : {
+        'primary' : '#3238f2'
+      }
+    },
   },
   plugins: [],
 }
